@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BlogFooEditor"
+             x:Class="BlogFooEditor.MainPage"
+             Title="Compose">
+  <StackLayout Padding="5,10">
+    <Label Text="Compose your post" HorizontalOptions="CenterAndExpand" FontSize="16"></Label>
+    <Label Text="Give a post title" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
+    <Entry Placeholder="Enter Post Title Here" FontSize="24" x:Name="PostTitle"></Entry>
+    <Label Text="Give a post subtitle" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
+    <Entry Placeholder="Enter Post SubTitle Here" FontSize="18" x:Name="PostSubTitle"></Entry>
+    <Label Text="Post Content as Markdown" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
+    <Editor VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="PostContent" FontSize="14"></Editor>
+  </StackLayout>
+</ContentPage>
