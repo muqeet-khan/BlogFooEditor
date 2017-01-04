@@ -13,19 +13,19 @@ namespace BlogFooEditor
         public MainPage()
         {
             InitializeComponent();
+            Done.Clicked += Done_Activated;
+        }
 
-            ToolbarItem nav1 = new ToolbarItem("Preview", "add.png",async () =>
+        private async void Done_Activated(object sender, EventArgs e)
+        {
+            var post = new Post()
             {
-                var post = new Post()
-                {
-                    Content = PostContent.Text,
-                    Title = PostTitle.Text,
-                    SubTitle = PostSubTitle.Text
+                Content = PostContent.Text,
+                Title = PostTitle.Text,
+                SubTitle = PostSubTitle.Text
 
-                };
-                await Navigation.PushAsync(new ShowResult(post));
-            });
-            ToolbarItems.Add(nav1);
+            };
+            await Navigation.PushAsync(new ShowResult(post));
         }
     }
 }

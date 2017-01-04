@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:BlogFooEditor"
              x:Class="BlogFooEditor.MainPage"
              Title="Compose">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Name="Done" x:Name="Done"></ToolbarItem>
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
   <StackLayout Padding="5,10">
     <Label Text="Compose your post" HorizontalOptions="CenterAndExpand" FontSize="16"></Label>
     <Label Text="Give a post title" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
@@ -13,4 +17,5 @@
     <Label Text="Post Content as Markdown" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
     <Editor VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="PostContent" FontSize="14"></Editor>
   </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
