@@ -47,6 +47,12 @@
 	<key>CFBundleShortVersionString</key>
 	<string></string>
 	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleBlackOpaque</string>
+	<string>UIStatusBarStyleLightContent</string><key>UIViewControllerBasedStatusBarAppearance</key>
+<false/><key>NSCameraUsageDescription</key>
+<string>This app needs access to the camera to take photos.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>This app needs access to photos.</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>This app needs access to microphone.</string>
 </dict>
 </plist>

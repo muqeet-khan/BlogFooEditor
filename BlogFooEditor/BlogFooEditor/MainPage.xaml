@@ -2,20 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BlogFooEditor"
+             xmlns:controls="clr-namespace:BlogFooEditor.UI"
              x:Class="BlogFooEditor.MainPage"
              Title="Compose">
   <ContentPage.ToolbarItems>
     <ToolbarItem Name="Done" x:Name="Done"></ToolbarItem>
+    <ToolbarItem Name="Photo" x:Name="Photo"></ToolbarItem>
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-  <StackLayout Padding="5,10">
-    <Label Text="Compose your post" HorizontalOptions="CenterAndExpand" FontSize="16"></Label>
-    <Label Text="Give a post title" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
-    <Entry Placeholder="Enter Post Title Here" FontSize="24" x:Name="PostTitle"></Entry>
-    <Label Text="Give a post subtitle" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
-    <Entry Placeholder="Enter Post SubTitle Here" FontSize="18" x:Name="PostSubTitle"></Entry>
-    <Label Text="Post Content as Markdown" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
-    <Editor VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="PostContent" FontSize="14"></Editor>
-  </StackLayout>
+    <ScrollView>
+      <StackLayout Padding="5,10" x:Name="MainStack">
+        <Label Text="No Internet Connection" HorizontalOptions="CenterAndExpand" FontSize="16" x:Name="InternetConnection" BackgroundColor="Color.Red" TextColor="Color.White"></Label>
+        <Label Text="Compose your post" HorizontalOptions="CenterAndExpand" FontSize="16"></Label>
+        <Label Text="Give a post title" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
+        <controls:TitleEntry Placeholder="Enter Post Title Here" FontSize="24" x:Name="PostTitle"/>
+        <Label Text="Give a post subtitle" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
+        <Entry Placeholder="Enter Post SubTitle Here" FontSize="18" x:Name="PostSubTitle"></Entry>
+        <Label Text="Post Content as Markdown" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
+        <Editor VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="PostContent" FontSize="14" HeightRequest="400" ></Editor>
+        <!--<Image VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="UploadImage" HeightRequest="400"></Image>-->
+        <Label Text="Attached Images" HorizontalOptions="StartAndExpand" FontSize="16"></Label>
+        <ScrollView>
+          <StackLayout Padding="5,10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="ImageStack" Orientation="Vertical" HeightRequest="400" >
+          </StackLayout>
+        </ScrollView>
+      </StackLayout>
+    </ScrollView>
   </ContentPage.Content>
 </ContentPage>

@@ -13,8 +13,20 @@ namespace BlogFooEditor
         {
             InitializeComponent();
 
+            if( Device.OS == TargetPlatform.iOS)
+            {
+                MainPage = new NavigationPage(new BlogFooEditor.MainPage())
+                {
+                    BarBackgroundColor = Color.FromRgb(101, 157, 247),
+                    BarTextColor = Color.FromRgb(252,252,252)
+                };
+            }
+            else
+            {
+                MainPage = new NavigationPage(new BlogFooEditor.MainPage());
+            }
+
             //MainPage = new BlogFooEditor.MainPage();
-            MainPage = new NavigationPage(new BlogFooEditor.MainPage());
         }
 
         protected override void OnStart()

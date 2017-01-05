@@ -35,6 +35,17 @@ namespace BlogFooEditor.iOS.Renderers
                     list.Add(newItem);
                 }
 
+                if (item.Title.ToLower() == "photo")
+                {
+                    var newItem = new UIBarButtonItem(UIBarButtonSystemItem.Camera)
+                    {
+                        Action = item.Action,
+                        Target = item.Target
+                    };
+
+                    list.Add(newItem);
+                }
+
                 if (item.Title.ToLower() == "upload")
                 {
                     var newItem = new UIBarButtonItem(UIBarButtonSystemItem.Save)

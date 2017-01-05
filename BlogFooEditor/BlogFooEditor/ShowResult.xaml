@@ -7,9 +7,13 @@
     <ToolbarItem Name="Upload" x:Name="Upload"></ToolbarItem>
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
+    <ScrollView>
     <StackLayout>
-      <WebView x:Name="browser" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+      <WebView x:Name="browser" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="600">
       </WebView>
+      <StackLayout x:Name="ImageStack" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+      </StackLayout>
     </StackLayout>
+    </ScrollView>
   </ContentPage.Content>
 </ContentPage>
